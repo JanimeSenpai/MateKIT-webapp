@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MateKIT - Ingyenes Díjnyertes Matematikai Oktatóprogram">
+    <meta name="keywords" content="MateKIT, oktatás, matematika, matematika tanulás, matematikai oktatóprogram, központi felvételi, matematika felvételi">
+    <title>MateKIT online</title>
+    <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS_HTML"></script>
+
+    <script type="application/javascript" src="skiko.js"></script>
+
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            overflow: hidden;
+        }
+           #ComposeTarget {
+            position: relative;
+            z-index: 1; /* Lower than the math content */
+            width: 100%;
+            height: 100%;
+        }
+        #warning {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            max-width: 830px;
+            z-index: 100;
+            background-color: white;
+            font-size: initial;
+            display: none;
+        }
+        #warning li {
+            padding-bottom: 15px;
+        }
+
+        #warning span.code {
+            font-family: monospace;
+        }
+
+        ul {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            font-size: initial;
+        }
+       #mathContent {
+            position: absolute;
+          width: 100%;
+
+            top: 0px; /* Adjust as needed */
+            z-index: 10; /* Higher than the canvas */
+            font-size: 2.25rem; /* 36px equivalent if base is 16px */
+            text-align: center; /* Center text within the div */
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 75vh; /* Limit height to viewport height */
+           /* background-color:#FEF7FF;*/
+        }
+        #close {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div id="mathContent" style="text-align:center">
+    </div>
+    <canvas id="ComposeTarget"></canvas>
+    <script src="composeApp.js"></script>
+</div>
+</body>
+
+</html>
