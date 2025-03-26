@@ -8,7 +8,6 @@
     <title>MateKIT online</title>
     <script type="text/javascript" async
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS_HTML"></script>
-     <script defer src="https://cloud.umami.is/script.js" data-website-id="6093dfab-f251-4ee7-8dfe-a562bb1abbd1"></script>
 
     <script type="application/javascript" src="skiko.js"></script>
 
@@ -70,20 +69,6 @@
             max-height: 75vh; /* Limit height to viewport height */
            /* background-color:#FEF7FF;*/
         }
-        #simpleLog {
-    position: absolute;
-    width: 100%;
-    top: 0px; /* Adjust as needed */
-    z-index: 10; /* Higher than the canvas */
-    font-size: 2.25rem; /* 36px equivalent if base is 16px */
-  //  text-align: center; /* Center text within the div */
-    overflow-y: auto; /* Enable vertical scrolling */
-    max-height: 80vh; /* Limit height to viewport height */
-    font-family: "Courier New", Courier, monospace; /* Use a monospace font */
-    /* background-color:#FEF7FF; */
-    padding-left: 200px; /* Add padding to the left */
-    padding-right: 200px; /* Add padding to the right */
-}
         #close {
             position: absolute;
             top: 0;
@@ -94,8 +79,8 @@
 </head>
 <body>
 <div>
-    <div id="mathContent" style="text-align:center"></div>
-    <div id="simpleLog" ></div>
+    <div id="mathContent" style="text-align:center">
+    </div>
     <canvas id="ComposeTarget"></canvas>
     <script src="composeApp.js"></script>
 </div>
